@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Payroll Management System</title>
+  <style>
+    body {
+      background-color: #212121;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .section:nth-child(odd) {
+      transition-delay: 0.3s;
+    }
+
+    .section:nth-child(even) {
+      transition-delay: 0.6s;
+    }
+
+    .section-title {
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: #333333;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .card-description {
+      margin-bottom: 10px;
+      color: #cccccc;
+    }
+
+    .card-link {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation Styles */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animated {
+      animation-fill-mode: both;
+      animation-duration: 0.5s;
+    }
+
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+
+    /* New Animation Styles */
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fadeInLeft {
+      animation-name: fadeInLeft;
+    }
+
+    /* Different Colors for Each Section */
+    .section:nth-child(1) .card {
+      background-color: #004d40;
+    }
+
+    .section:nth-child(2) .card {
+      background-color: #3e2723;
+    }
+
+    .section:nth-child(3) .card {
+      background-color: #1a237e;
+    }
+
+    .section:nth-child(4) .card {
+      background-color: #880e4f;
+    }
+
+    .section:nth-child(5) .card {
+      background-color: #e65100;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="animated fadeInUp">My Payroll Management System</h1>
+
+    <div class="section animated fadeInUp">
+      <h2 class="section-title">Employee Signup</h2>
+      <div class="card">
+        <h3 class="card-title">Signup Form</h3>
+        <p class="card-description">Create a new employee account.</p>
+        <a href="/employee/signup" class="card-link">Go to Signup</a>
+      </div>
+    </div>
+
+    <div class="section animated fadeInUp">
+      <h2 class="section-title">Attendance</h2>
+      <div class="card">
+        <h3 class="card-title">Attendance Tracker</h3>
+        <p class="card-description">Track employee attendance.</p>
+        <a href="/attendance" class="card-link">Go to Attendance</a>
+      </div>
+    </div>
+
+    <div class="section animated fadeInUp">
+      <h2 class="section-title">Payroll Release</h2>
+      <div class="card">
+        <h3 class="card-title">Payroll Release System</h3>
+        <p class="card-description">Release employee payroll.</p>
+        <a href="/payroll/release" class="card-link">Go to Payroll Release</a>
+      </div>
+    </div>
+
+    <div class="section animated fadeInUp">
+      <h2 class="section-title">Salary Details</h2>
+      <div class="card">
+        <h3 class="card-title">Salary Details Management</h3>
+        <p class="card-description">Manage employee salary details.</p>
+        <a href="/salary/details" class="card-link">Go to Salary Details</a>
+      </div>
+    </div>
+
+    <div class="section animated fadeInUp">
+      <h2 class="section-title">Show Employees</h2>
+      <div class="card">
+        <h3 class="card-title">Employee List</h3>
+        <p class="card-description">View the list of employees.</p>
+        <a href="/employees" class="card-link">Go to Show Employees</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

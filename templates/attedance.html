@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Form</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 20px;
+            color: #00bcd4;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0097a7;
+        }
+
+        /* Animation Styles */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="animated fadeInUp">Attendance Form</h2>
+    <form action="/attendance" method="POST" class="animated fadeInUp">
+        <label for="dptid">Department ID:</label>
+        <input type="text" id="dptid" name="dptid" required>
+
+        <label for="dptname">Department Name:</label>
+        <input type="text" id="dptname" name="dptname" required>
+
+        <label for="eid">Employee ID:</label>
+        <input type="text" id="eid" name="eid" required>
+
+        <label for="ename">Employee Name:</label>
+        <input type="text" id="ename" name="ename" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="timein">Time In:</label>
+        <input type="time" id="timein" name="timein" required>
+
+        <label for="timeout">Time Out:</label>
+        <input type="time" id="timeout" name="timeout" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
